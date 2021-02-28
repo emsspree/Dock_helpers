@@ -1,11 +1,12 @@
 #!/bin/sh
 
-## get current value ## 0 || 1
-curVAL=$(defaults read com.apple.dock contents-immutable)
+## get current value
+CURR=$(defaults read com.apple.dock contents-immutable 2>/dev/null || echo '0') ##  0 || 1
 
-## decide on new value ## true || false
-case $curVAL in 0) newVAL=true;  printf   'locked\n' >&2 ;;
-                1) newVAL=false; printf 'unlocked\n' >&2 ;; esac
+## decide on new value
+case $CURR in 0) NEW=true ;; 1) NEW=false ;; esac ##  true || false
 
-## set new value 
-defaults write com.apple.dock contents-immutable -bool $newVAL  &&  killall Dock
+## set new value
+if [ $NEW = true ] || [ $NEW = false ]; then
+  defaults write com.apple.dock contents-immutable -bool $NEW && killall Dock
+fi
