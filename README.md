@@ -1,14 +1,14 @@
 # Dock helpers
 
-Some tiny tools two make life with macOS’s Dock easier. 
+Shell programms to make life easier.
 
 ----
 
-## 1 dockzwer
+## 1. Group Items of Dock
 
-`dockzwer` — Add spacer tiles to the Dock to group its icons.
+`dockzwer` — Add spacer tiles to the Dock to group the icons.
 
-Without options, a spacer tile is placed on Dock’s Applications side which is as wide as the other icons.  
+Without options a spacer tile is placed on Dock’s Applications side. It is as wide as the other icons.
 
 Use option…
 - `-d` to place the spacer on Dock’s Documents side instead.
@@ -16,6 +16,13 @@ Use option…
 - `-l` to run `docklockle` afterwards.
 - `-h` to print help.
 
-## 2 docklockle
+## 2. Make Dock Contents (Im)mutable
 
-`docklockle` — Toggle Dock’s contents locked/unlocked.
+`docklockle` — Toggle Dock locked and unlocked.
+
+Contents are mutable by default. Items can be added, moved or removed.
+
+Use this helper once to disable this.  
+Use this helper again to re-enable this.
+
+No options.
