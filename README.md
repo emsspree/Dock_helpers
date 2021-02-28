@@ -13,7 +13,6 @@ Without options a spacer tile is placed on Dock’s Applications side. It is as 
 Use option…
 - `-d` to place the spacer on Dock’s Documents side instead.
 - `-s` to use a half-width small spacer tile instead.
-- `-l` to run `docklockle` afterwards.
 - `-h` to print help.
 
 ## 2. Make Dock Contents (Im)mutable
